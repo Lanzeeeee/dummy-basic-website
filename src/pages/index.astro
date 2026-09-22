@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="AziendaDemo | Soluzioni per la tua impresa"
+  description="AziendaDemo offre servizi professionali su misura per imprese e professionisti."
+>
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">Soluzioni professionali</p>
+      <h1>Facciamo crescere le idee che contano.</h1>
+      <p class="hero-text">
+        Affianchiamo aziende e professionisti con servizi concreti, chiari e costruiti sulle loro esigenze.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="/contatti">Richiedi informazioni</a>
+        <a class="button button-secondary" href="/servizi">Scopri i servizi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Cosa facciamo</p>
+      <h2>Servizi pensati per il tuo obiettivo</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Consulenza</h3>
+          <p>Analizziamo le necessità e definiamo un percorso semplice e misurabile.</p>
+        </article>
+
+        <article class="card">
+          <h3>Soluzioni su misura</h3>
+          <p>Realizziamo proposte personalizzate, senza pacchetti inutilmente complessi.</p>
+        </article>
+
+        <article class="card">
+          <h3>Assistenza</h3>
+          <p>Restiamo disponibili anche dopo la consegna, per accompagnarti nel tempo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

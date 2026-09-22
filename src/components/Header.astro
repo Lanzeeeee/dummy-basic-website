@@ -1,0 +1,34 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-content">
+    <a class="logo" href="/" aria-label="Azienda Demo - Home">
+      Azienda<span>Demo</span>
+    </a>
+
+    <nav aria-label="Navigazione principale">
+      <ul class="nav-list">
+        <li>
+          <a class:list={[{ active: currentPath === "/" }]} href="/">Home</a>
+        </li>
+        <li>
+          <a class:list={[{ active: currentPath === "/chi-siamo" }]} href="/chi-siamo">
+            Chi siamo
+          </a>
+        </li>
+        <li>
+          <a class:list={[{ active: currentPath === "/servizi" }]} href="/servizi">
+            Servizi
+          </a>
+        </li>
+        <li>
+          <a class:list={[{ active: currentPath === "/contatti" }]} href="/contatti">
+            Contatti
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

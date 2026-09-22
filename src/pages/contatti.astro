@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contatti | AziendaDemo"
+  description="Contatta AziendaDemo per informazioni o per richiedere un preventivo."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contatti</p>
+      <h1>Parliamo del tuo progetto.</h1>
+      <p>Scrivici o chiamaci: risponderemo il prima possibile.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <div class="contact-details">
+        <h2>Recapiti</h2>
+        <p><strong>Email:</strong> <a href="mailto:info@aziendademo.it">info@aziendademo.it</a></p>
+        <p><strong>Telefono:</strong> <a href="tel:+390811234567">081 123 4567</a></p>
+        <p><strong>Sede:</strong> Napoli, Italia</p>
+        <p class="small-text">
+          Sostituisci questi contatti fittizi con quelli reali dell’azienda prima della pubblicazione.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <label>
+          Nome e cognome
+          <input type="text" name="nome" placeholder="Il tuo nome" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="nome@email.it" required />
+        </label>
+
+        <label>
+          Messaggio
+          <textarea
+            name="messaggio"
+            rows="6"
+            placeholder="Come possiamo aiutarti?"
+            required
+          ></textarea>
+        </label>
+
+        <button class="button button-primary" type="submit">Invia richiesta</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

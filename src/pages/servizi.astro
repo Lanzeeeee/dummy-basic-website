@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const servizi = [
+  {
+    titolo: "Consulenza iniziale",
+    testo: "Un incontro per capire esigenze, obiettivi e priorità del tuo progetto.",
+  },
+  {
+    titolo: "Progetto personalizzato",
+    testo: "Una proposta costruita intorno alla tua attività, ai tuoi tempi e al tuo budget.",
+  },
+  {
+    titolo: "Realizzazione",
+    testo: "Sviluppiamo il lavoro concordato con aggiornamenti chiari durante ogni fase.",
+  },
+  {
+    titolo: "Assistenza continua",
+    testo: "Restiamo un punto di riferimento anche dopo il completamento del servizio.",
+  },
+];
+---
+
+<BaseLayout
+  title="Servizi | AziendaDemo"
+  description="Scopri i servizi professionali offerti da AziendaDemo."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">I nostri servizi</p>
+      <h1>Un supporto concreto, dalla prima idea al risultato.</h1>
+      <p>
+        Scegliamo insieme il servizio più utile, senza complicare ciò che può essere semplice.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card-grid">
+      {
+        servizi.map((servizio) => (
+          <article class="card">
+            <h2>{servizio.titolo}</h2>
+            <p>{servizio.testo}</p>
+            <a class="text-link" href="/contatti">Parliamone →</a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
